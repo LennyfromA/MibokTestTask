@@ -1,0 +1,81 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#cart {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    padding: 10px;
+    background-color: #388a3c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cart:hover{
+    background-color: #4bab4b;
+}
+
+
+.items__card{
+    padding: 25px;
+    margin-top: 45px;
+    text-align: center;
+    border: 1px rgba(0, 0, 0, 0.30) solid;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.add-to-cart{
+    text-decoration: none;
+    color:black;
+}
+.accordion-item .seansbody .card-button .add-to-cart {
+
+    border-radius: 15px;
+    cursor: pointer;
+    border: 0;
+    background: #3688f4;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 16px;
+}
+.accordion-item .seansbody .card-button .add-to-cart:hover {
+    background: rgba(54, 136, 244, 0.7);
+}
+.items-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.card-title, .card-text{
+    margin: 10px;
+}
+.items__card img{
+    transition: transform 0.5s ease;
+}
+.items__card:hover > img {
+    transform: scale(1.1);
+}

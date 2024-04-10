@@ -1,0 +1,27 @@
+version: "3.9"
+
+
+services:
+  webserver:
+    container_name: php-apache
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./www:/var/www/html
+    ports:
+      - "8000:80"
+    depends_on:
+      - mysql-db
+
+  mysql-db:
+    image: mysql:8.0
+    volumes:
+      - ./initdb:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD:
+      MYSQL_DATABASE: miboktest
+      MYSQL_USER: root
+      MYSQL_PASSWORD:
+    ports:
+      - "3306:3306"
